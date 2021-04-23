@@ -9,10 +9,10 @@ exports.creds = {
   
     responseMode: 'form_post', 
   
-    redirectUrl: 'http://localhost:2121/auth/openid/return', 
+    redirectUrl: 'kingstodo.heroku.com/auth/openid/return',
 
-    //redirectUrl: 'https://kingstodolistapp/auth/openid/return', 
-  
+    //redirectUrl: 'http://localhost:2121/auth/openid/return', 
+
     allowHttpForRedirectUrl: true,
   
     validateIssuer: false,
@@ -39,7 +39,9 @@ exports.creds = {
     clockSkew: null,
   };
   
-  exports.destroySessionUrl = 'http://localhost:2121';
+  //exports.destroySessionUrl = 'http://localhost:2121';
+
+  exports.destroySessionUrl = 'http://kingstodo.heroku.com';
   
   exports.useMongoDBSessionStore = false;
   
