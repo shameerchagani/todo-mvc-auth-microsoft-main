@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kings TodoList App::</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href="css/style.css">
+
+</head>
+
+<body>
+    <header>
+        <h1>Kings TodoList App::</h1>
+    </header>
+    <main class="container todos">
+        <section class="welcome">
+            <h4>Welcome, <span class="displayName"><%= user.displayName.toUpperCase() %></span>, you have <span
+                    class='left'><%= left %></span> pending task(s)</h2>
+                <a href="../auth/logout">Logout</a>
+        </section>
+        <section class="todo-form">
+            <form action="/todos/createTodo" method='POST'>
+                <input type="text" placeholder="Enter Todo Item" name='todoItem' autofocus autocomplete="off"
+                    required />
+                <button type="submit"><i class="fas fa-plus"></i>Add</button>
+                <select>
+                    <option value="All">All</option>
+                    <option value="Completed">Completed</option>
+                    <option value="Pending">Pending</option>
+                </select>
+            </form>
+        </section>
+
+        <section class='todoList'>
+
+            <ul>
+                <% todos.forEach( el => { %>
+                <li class='todoItem' data-id='<%=el._id%>'>
+                    <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+                    <div class='icons'>
+                        <span class='<%= el.completed === true ? 'completed' : 'not'%>'><i class='fas fa-check'></i></span>
+                        <span class='del'><i class="fas fa-trash"></i></span>
+                    </div>
+                </li>
+                <% }) %>
+            </ul>
+        </section>
+
+    </main>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

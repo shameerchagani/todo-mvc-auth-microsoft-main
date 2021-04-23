@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+header > h1{
+    position: sticky;
+    width: 100%;
+    background: dodgerblue;
+    color: skyblue;
+    font-family: 'Zen Dots', cursive;
+    text-align: center;
+    padding: 10px 5px;
+    font-size: 42px;
+}
+main.container.home{
+   /* text-align: center; */
+   margin: 0px auto;
+   height: 100vh; 
+   width: 80vw;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   flex: 1;
+   font-family: sans-serif;
+   background: rgba(0,0,0,0.15);
+}
+main h4{
+    padding: 15px;   
+}
+.left{
+    color: red;
+    font-size: 1.2em;
+}
+.welcome{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex:1;   
+}
+.welcome a{
+    text-decoration: none;
+    background:firebrick;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    margin: 5px;
+    padding: 10px;
+}
+.displayName{
+    color:dodgerblue;
+    font-size: 1.2em;
+}
+.todo-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo-form form > input[type='text']{
+    padding: 10px;
+    font-size: 1.2em;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #ddd;
+    background: lightgray;
+}
+.todo-form form > input[type='text']:focus{
+    border-bottom: 2px solid dodgerblue;
+    background: transparent;
+    transition:  all 1s linear;
+}
+.todo-form button{
+    padding: 10px;
+    background: dodgerblue;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.2em;
+    border:none;
+
+}
+.todo-form button > i {
+    margin-right: 5px;
+}
+.todo-form select{
+    padding: 10px;
+    font-size: 1.2em;
+}
+.todoList{
+    width: 80%;
+    margin: 20px auto;
+    /* display: flex;
+    flex:1;
+    align-items: center;
+    flex-direction: column; */
+}
+.todoList ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: dodgerblue;
+    color: white;
+    opacity: 0.9;
+    box-shadow: 3px 3px 8px gray;
+    flex:1;
+    list-style-type: none;
+    padding: 10px 5px;
+    margin: 4px 4px;
+}
+.todoList ul li:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.del{
+   padding:5px;
+    font-size: 1.2em;
+    margin-right: 5px;
+}
+.del:hover{
+    color:red;
+}
+span .fa-check{
+   
+    padding:5px;
+    font-size: 1.2em;
+    margin-right: 5px;
+}
+span .fa-check:hover{
+    color: cyan; 
+}
+main.container.todos{
+    /* text-align: center; */
+    margin: 2px auto 0 auto;
+    height: 100vh; 
+    width: 80vw;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1; */
+    font-family: sans-serif;
+    background: rgba(170, 168, 168, 0.15);
+ }
+
+
+a#login-btn{
+    text-decoration: none;
+    font-size: 30px;
+    color: dodgerblue;
+    background: white;
+    border: 2px inset dodgerblue;
+}
+.completed{
+    text-decoration: line-through;
+    color: darkgray;
+ }
+/*.not{
+    text-decoration: underline;
+} */
